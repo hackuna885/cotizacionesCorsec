@@ -65,8 +65,8 @@ if ($opcion === 1) {
 		
 				$mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 				$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-				$mail->Username   = 'infocorreosmtp@gmail.com';                     // SMTP username
-				$mail->Password   = '123Sistemas2021';                               // SMTP password
+				$mail->Username   = 'noresponder@utfvejecutivas.org';                     // SMTP username
+				$mail->Password   = '@123Correo';                               // SMTP password
 				$mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 				$mail->Port       = 587;                                    // TCP port to connect to
 		
@@ -74,7 +74,7 @@ if ($opcion === 1) {
 				$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) );
 		
 				//Recipients
-				$mail->setFrom('infocorreosmtp@gmail.com', 'Info Correo');
+				$mail->setFrom('noresponder@utfvejecutivas.org', 'Info Correo');
 				$mail->addAddress($correo);     //Correo de Salida
 				// $mail->addBCC('oliver.velazquez@corsec.com.mx');
 				// $mail->addAttachment('logoCorsec.png');  //Archivo Adjunto
@@ -82,7 +82,7 @@ if ($opcion === 1) {
 				// Content
 				$mail->isHTML(true);                                  // Set email format to HTML
 				// $mail->msgHTML(file_get_contents('ejemplo.html'), __DIR__);     //Se envio archivo en HTML pero $mail->Body debe estar desactivado
-				$mail->Subject = 'Cambio de contraseña - Universidad Tecnológica Fidel Velázquez';
+				$mail->Subject = 'Cambio de contraseña - CORSEC';
 				$mail->Body    = '
 				<h1>¡Hola '.$nombre.'!</h1>
 				<br>
